@@ -1,0 +1,26 @@
+<view class="section">
+  <view class="section__title">滚动视图容器</view>
+  <scroll-view scroll-y bindscrolltoupper="upper" style="2000px" upper-threshold="{{50}}" >
+    <view id="green" style="background:green;height:200px;"></view>
+    <view id="red"  style="background:red;height:200px;"></view>
+    <view id="yellow" style="background:yellow;height:200px;"></view>
+    <view id="blue" style="background:blue;height:200px;"></view>
+  </scroll-view>
+
+  <view>滑块视图容器</view>
+  <swiper indicator-dots="true" autoplay="true" interval="1000">
+    <block wx:for="{{order}}">
+      <swiper-item>
+        <view style="background:{{item}};height:200px;">{{item}}</view>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view>拖动视图容器</view>
+  <movale-area style="background:red;">
+    <movable-view style="height: 50px; width: 50px; background: blue;" direction="all" out-of-bounds="true" friction="1" damping="2">
+    </movable-view>
+  </movale-area>
+
+  <icon type="success" size="20" color="pink" />
+</view>
